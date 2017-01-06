@@ -11,7 +11,7 @@
 <meta property="og:url" content="http://tedxz.github.io/2016/04/16/routing-between-multiple-networks/index.html">
 <meta property="og:site_name" content="Zheng Xie's Blog">
 <meta property="og:description" content="BackgroundRecently, I’m working on experiments for days in lab. Since I’m not a formal student of NJU yet, I do not have a student account for connecting to campus network, which can access to both in">
-<meta property="og:updated_time" content="2016-07-21T13:10:05.488Z">
+<meta property="og:updated_time" content="2017-01-06T16:09:55.084Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Routing Among Multiple Networks">
 <meta name="twitter:description" content="BackgroundRecently, I’m working on experiments for days in lab. Since I’m not a formal student of NJU yet, I do not have a student account for connecting to campus network, which can access to both in">
@@ -230,8 +230,8 @@ var _hmt = _hmt || [];
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">route add 114.0.0.0 mask 255.0.0.0 172.26.69.242</div></pre></td></tr></table></figure>
 <p>The above command adds a route, sending all packets whose destination are <code>114.*.*.*</code> through interface <code>172.26.69.242</code>.</p>
 <h2 id="IP-Routing"><a href="#IP-Routing" class="headerlink" title="IP Routing"></a>IP Routing</h2><p>Simply, the computer sending a datagram to a particular destination may have to go through many nodes in the network. To find a possible (and fast) path from your PC to your destination, each node on the path should know what the next step is. A routing table tells the computer where should it send the datagrams next step for a particular destination.</p>
-<p>IP searches the routing table for the route <em>that is the closest match</em> to the destination IP address. If <code>Network Destination in the table</code> &amp; <code>Netmusk</code> = <code>Destination IP address</code> &amp; <code>Netmusk</code>, it means that the destination IP address matches the Network Destination. A metric indicates the cost of using a route, which is typically the number of hops to the IP destination. If there are multiple routes to the same destination with different metrics, the route with the lowest metric is selected.</p>
-<p>In the above case, we added a route with <code>Destination = 144.0.0.0</code> and <code>Netmusk = 255.0.0.0</code>, which would be the closest route for any IP addresses like <code>114.*.*.*</code>, telling the PC send the datagrams through <code>172.26.69.242</code>.</p>
+<p>IP searches the routing table for the route <em>that is the closest match</em> to the destination IP address. If <code>Network Destination in the table</code> &amp; <code>Netmask</code> = <code>Destination IP address</code> &amp; <code>Netmask</code>, it means that the destination IP address matches the Network Destination. A metric indicates the cost of using a route, which is typically the number of hops to the IP destination. If there are multiple routes to the same destination with different metrics, the route with the lowest metric is selected.</p>
+<p>In the above case, we added a route with <code>Destination = 144.0.0.0</code> and <code>Netmask = 255.0.0.0</code>, which would be the closest route for any IP addresses like <code>114.*.*.*</code>, telling the PC send the datagrams through <code>172.26.69.242</code>.</p>
 <h2 id="Related-Links"><a href="#Related-Links" class="headerlink" title="Related Links"></a>Related Links</h2><p><a href="https://technet.microsoft.com/en-us/library/cc785246%28v=ws.10%29.aspx" target="_blank" rel="external">IP routing</a><br><a href="https://technet.microsoft.com/en-us/library/cc779122%28v=ws.10%29.aspx" target="_blank" rel="external">The IP routing table</a><br><a href="http://superuser.com/questions/59996/what-does-on-link-mean-on-the-result-of-route-print-command" target="_blank" rel="external">What does “On-link” mean on the result of “route print” command?</a><br><a href="http://www.blogjava.net/amigoxie/archive/2010/06/12/323467.html" target="_blank" rel="external">出差常备：route命令详解与使用实例</a></p>
 
       
@@ -239,7 +239,7 @@ var _hmt = _hmt || [];
 
     <footer class="article-footer">
       
-        <a data-url="http://tedxz.github.io/2016/04/16/routing-between-multiple-networks/" data-id="cisnc2s86004k9ebfvlt5a35a" class="article-share-link" data-share="baidu">share</a>
+        <a data-url="http://tedxz.github.io/2016/04/16/routing-between-multiple-networks/" data-id="cisy8bsxo001l1dbf9bqbnxgc" class="article-share-link" data-share="baidu">share</a>
       
 
       
@@ -290,7 +290,7 @@ var _hmt = _hmt || [];
   <div class="outer">
     <div id="footer-info" class="inner">
       <a href="/" class="logo">Zheng Xie&#39;s Blog</a>
-      &copy; 2016 Zheng Xie<br>
+      &copy; 2017 Zheng Xie<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> | Themed by <a href="https://github.com/ppoffice/hexo-theme-alex">Alex</a><br>
     </div>
   </div>
